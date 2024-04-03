@@ -9,6 +9,8 @@ import { setHTML, setText } from "../utils/Writer.js";
 export class SandboxSpellsController {
   constructor() {
     console.log('⏳🪄');
+    // We never tell the controller to directly get our spells, cause we on want the get request to happen AFTER we are logged in.
+    // if we tried to get our spells before the login happens, the server will return a 401
     AppState.on('mySpells', this.drawMySpells)
     AppState.on('mySpells', this.drawSpellCount)
     // this.getMySpellBook() only want to draw spells when someone is logged in

@@ -1,4 +1,6 @@
 
+// NOTE these format functions were to turn the complex data from the dnd api into something flatter.
+// you could do something like this as well if you want to change the way the data from an API is presented but always keep in mind any requirements you need to save that data
 function formatDamage(damage, level) {
   if (!damage) return
   let damageString = ''
@@ -13,7 +15,6 @@ function formatDamage(damage, level) {
   }
   return damageString
 }
-
 function formatComponents(components) {
   let componentsArr = []
   if (components.includes('V')) {
